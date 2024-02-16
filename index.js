@@ -1,1 +1,0 @@
-const data  = "Bem-vindo"
