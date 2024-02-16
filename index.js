@@ -1,0 +1,1 @@
+const data  = "Bem-vindo"
