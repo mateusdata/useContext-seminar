@@ -9,21 +9,21 @@ import Login from "../pages/Login";
 const AllRoutes = () => {
 
     function Private({ children }: any) {
-        const { loading, setLoading, authenticated } = useContext(ContextAuth);
-       
+        const { loading, authenticated } = useContext(ContextAuth);
         if (loading) {
-            return <Spin size="large" delay={1} />
+            return <Spin size="large" delay={0} />
         }
         if (!authenticated) {
-            return <Navigate to={"/login" || "/test"} />
+            return <Navigate to={"/login"} />
         }
         return children
     }
+    
     return (
         <BrowserRouter>
             <AuthProvider>
                 <Routes>
-                    <Route path="/" element={<Private>  <Home /> </Private>} />
+                    <Route path="/" element={<Private>  {String} <Home /> </Private>} />
                     <Route path="/login" element={<Login />} />
                 </Routes>
             </AuthProvider>

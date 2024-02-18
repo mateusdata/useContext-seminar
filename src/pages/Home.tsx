@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextAuth } from '../context/AuthProvider'
 
 const Home = () => {
+  const {user} = useContext(ContextAuth);
   return (
     <div>       
-       Bem vindo ususario, vc está logado.
+       {`Bem vindo ${user?.name}, vc está logado. seu email é ${user?.email}`}
     </div>
   )
 }
