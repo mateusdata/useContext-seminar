@@ -8,9 +8,10 @@ interface FormatContext {
     setLoading: Dispatch<SetStateAction<boolean>>
 }
 
-interface FormatUser {
+export interface FormatUser {
     name: string,
     email: string,
+    password?: string
 }
 export const ContextAuth = createContext<FormatContext>({} as FormatContext)
 
