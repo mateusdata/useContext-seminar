@@ -23,7 +23,7 @@ const AllRoutes = () => {
         <BrowserRouter>
             <AuthProvider>
                 <Routes>
-                    <Route path="/" element={<Private>  {String} <Home /> </Private>} />
+                    <Route path="/" element={<Private> <Home /> </Private>} />
                     <Route path="/login" element={<Login />} />
                 </Routes>
             </AuthProvider>

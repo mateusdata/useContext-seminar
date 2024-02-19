@@ -20,7 +20,6 @@ const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        console.log("entrou")
         try {
             const data: any = localStorage.getItem("user")
             setUser(JSON.parse(data))
