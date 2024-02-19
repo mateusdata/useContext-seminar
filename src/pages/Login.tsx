@@ -1,13 +1,17 @@
 import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form'
-import { ContextAuth, FormatUser } from '../context/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import { Spin } from 'antd';
 
 const Login = () => {
   const navigate = useNavigate();
 
-  const { register, handleSubmit,  formState: { errors } } = useForm<FormatUser>({
+  const { register, handleSubmit,  formState: { errors } } = useForm({
+    defaultValues:{
+      name:"",
+      email:"",
+      password:""
+    }
   });
 
   const signIn = (data:object | any) => {
