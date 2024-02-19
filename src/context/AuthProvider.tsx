@@ -20,6 +20,7 @@ const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
+        console.log("entrou")
         try {
             const data: any = localStorage.getItem("user")
             setUser(JSON.parse(data))
@@ -27,7 +28,7 @@ const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
         } catch (error) {
             alert("erro")
         }
-    }, [])
+    }, [setUser])
 
     return (
         <ContextAuth.Provider value={{ user, setUser, authenticated: !!user, loading, setLoading }}>
