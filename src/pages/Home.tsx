@@ -4,12 +4,7 @@ import { ContextAuth } from '../context/AuthProvider'
 const Home = () => {
   const { user, setUser } = useContext(ContextAuth);
   const SignOut = () => {
-    try {
-      localStorage.removeItem("user");
-      setUser(null);
-    } catch (error) {
-      console.log(error)
-    }
+
   }
   return (
     <div className='flex justify-center items-center h-screen w-full flex-col gap-3 text-center'>

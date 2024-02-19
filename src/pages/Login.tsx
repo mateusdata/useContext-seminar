@@ -10,28 +10,16 @@ const Login = () => {
   const { register, handleSubmit,  formState: { errors } } = useForm<FormatUser>({
   });
 
-  const {setUser, loading } = useContext(ContextAuth);
-
-
-  const SignIn = (data:object | any) => {
-    try {
-      const { password, ...user } = data;
-      localStorage.setItem("user", JSON.stringify(user));
-      setUser(user);
-      navigate("/")
-    } catch (error) {
-      console.log("Ocorreu um erro")
-    }
+  const createUser = (data:object | any) => {
+   
   }
-  if (loading) {
-    return <Spin />
-  }
+
 
   return (
     <div className='flex flex-col p-5 h-screen justify-center items-center w-full border-2'>
       <h1 className='pb-5'>Login com useContext</h1>
  
-      <form className='flex flex-col w-50 h-62 p-11 gap-3 border  ' onSubmit={handleSubmit(SignIn)}>
+      <form className='flex flex-col w-50 h-62 p-11 gap-3 border  ' onSubmit={handleSubmit(createUser)}>
         <input className='border outline-none' {...register("name", { required: "Nome é obrigatorio" })}  type='text' placeholder="Nome" />
         <p className='text-red-600 text-sm'>{errors?.name && errors?.name?.message}</p>
         <input className='border outline-none' {...register("email", { required: "Email é obrigatorio" })} type='email' placeholder="Email" />
