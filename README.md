@@ -1,4 +1,4 @@
-# Iniciando com o Projeto de Login em React com TypeScript
+# Iniciando  o Projeto de Login em React com TypeScript
 
 Este projeto foi inicializado com [Create React App] e utiliza `useContext` para implementar um sistema de login.
 
