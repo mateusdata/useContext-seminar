@@ -4,7 +4,7 @@ import { ContextAuth } from '../context/AuthProvider'
 const Home = () => {
   const { user, setUser } = useContext(ContextAuth);
   const SignOut = () => {
-
+    
   }
   return (
     <div className='flex justify-center items-center h-screen w-full flex-col gap-3 text-center'>
